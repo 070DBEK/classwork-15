@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <main class="container my-5">
+        <h1>Title: {{ post.title }}</h1>
+        <p class="text-muted">Posted on {{ post.created_at}}</p>
+        <h3>Content {{ post.content }}</h3>
+
+        <button>
+            <a href="{% url 'home' %}">HOME</a>
+        </button>
+    </main>
+{% endblock %}

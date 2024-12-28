@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Post List{% endblock %}
+
+{% block content %}
+    <main class="container my-5">
+        <h2 class="text-center mb-4">Blog Posts</h2>
+        <div class="list-group">
+            {% for post in posts %}
+                <a href="{{ post.get_detail_url }}" class="list-group-item list-group-item-action">{{post.title}}</a>
+            {% empty %}
+            No result
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}
